@@ -5,7 +5,17 @@ import time
 import sys
 from DigitalFate import Tiger
 
-the_DigitalFate = Tiger()
+
+the_DigitalFate_ = None
+
+
+def the_DigitalFate():
+    global the_DigitalFate_
+
+    if not the_DigitalFate_:
+        the_DigitalFate_ = Tiger()
+    
+    return the_DigitalFate_
 
 class Remote_Client:
     def __init__(self, url):
@@ -103,7 +113,7 @@ class Remote_Client:
 
 
     def custom_tool(self, func):
-        the_code = textwrap.dedent(the_DigitalFate.extract_source(func))
+        the_code = textwrap.dedent(the_DigitalFate().extract_source(func))
         # Remove the first line
 
         if the_code.startswith("@remote.custom_tool"):
