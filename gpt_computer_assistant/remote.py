@@ -2,7 +2,7 @@ import textwrap
 import requests
 
 import time
-from DigitalFate import Tiger
+
 
 
 the_DigitalFate_ = None
@@ -12,6 +12,7 @@ def the_DigitalFate():
     global the_DigitalFate_
 
     if not the_DigitalFate_:
+        from DigitalFate import Tiger
         the_DigitalFate_ = Tiger()
 
     return the_DigitalFate_
