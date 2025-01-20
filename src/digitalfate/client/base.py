@@ -35,12 +35,12 @@ class DigitalFateClient(Call, Storage, Tools, Agent, Markdown, Others):
 
         elif "DigitalFate.ai" in url:
             self.server_type = "Cloud(DigitalFate)"
-        elif "devserver" in url:
-            self.server_type = "Local(DevServer)"
+        elif "devserver" in url or "localserver" in url:
+            self.server_type = "Local(LocalServer)"
         else:
             self.server_type = "Cloud(Unknown)"
 
-        if url == "devserver":
+        if url == "devserver" or url == "localserver":
             
             url = "http://localhost:7541"
             from ..server import run_dev_server, stop_dev_server, is_tools_server_running, is_main_server_running
