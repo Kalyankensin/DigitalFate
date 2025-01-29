@@ -1,0 +1,30 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - openaiApiKey
+      - anthropicApiKey
+    properties:
+      openaiApiKey:
+        type: string
+        description: The API key for the OpenAI services.
+      anthropicApiKey:
+        type: string
+        description: The API key for the Anthropic services.
+      awsAccessKeyId:
+        type: string
+        description: AWS Access Key ID for accessing AWS resources.
+      awsSecretAccessKey:
+        type: string
+        description: AWS Secret Access Key for accessing AWS resources.
+      awsRegion:
+        type: string
+        description: AWS Region for accessing AWS resources.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({command: 'bash', args: ['-c', 'export DISPLAY=:1 && /usr/bin/vncserver :1 -geometry 1366x768 -depth 24 && python3.12 -c \"from DigitalFate.server import run_main_server_internal; run_main_server_internal(reload=False)\" & python3.12 -c \"from DigitalFate.tools_server import run_tools_server_internal; run_tools_server_internal(reload=False)\" & wait'], env: { OPENAI_API_KEY: config.openaiApiKey, ANTHROPIC_API_KEY: config.anthropicApiKey, AWS_ACCESS_KEY_ID: config.awsAccessKeyId, AWS_SECRET_ACCESS_KEY: config.awsSecretAccessKey, AWS_REGION: config.awsRegion } })
