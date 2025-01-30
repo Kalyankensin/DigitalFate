@@ -3,6 +3,8 @@
 
 # What is DigitalFate?
 
+[![smithery badge](https://smithery.ai/badge/@DanyelaMB/DigitalFate)](https://smithery.ai/server/@DanyelaMB/DigitalFate)
+
 DigitalFate provides an advanced, enterprise-ready framework for orchestrating LLM calls, agents, and computer-based tasks in a cost-efficient manner. It delivers reliable systems, scalability, and a task-oriented architecture to handle real-world applications effectively.
 
 **Key Features:**
@@ -30,6 +32,15 @@ DigitalFate provides an advanced, enterprise-ready framework for orchestrating L
 
 ## Installation
 
+### Installing via Smithery
+
+To install DigitalFate for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@DanyelaMB/DigitalFate):
+
+```bash
+npx -y @smithery/cli install @DanyelaMB/DigitalFate --client claude
+```
+
+### Manual Installation
 ```bash
 pip install digitalfate
 ```

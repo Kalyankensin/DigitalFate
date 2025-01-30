@@ -1,0 +1,21 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - openaiApiKey
+      - anthropicApiKey
+    properties:
+      openaiApiKey:
+        type: string
+        description: The API key for OpenAI services.
+      anthropicApiKey:
+        type: string
+        description: The API key for Anthropic services.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({command: 'docker', args: ['run', '--rm', '-e', `OPENAI_API_KEY=${config.openaiApiKey}`, '-e', `ANTHROPIC_API_KEY=${config.anthropicApiKey}`, 'digitalfate'], env: {}})
