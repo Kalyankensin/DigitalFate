@@ -1,5 +1,6 @@
-
 ![banner](https://github.com/user-attachments/assets/eecc3b3f-313c-41aa-a28f-0c10b64d61b6)
+
+[![smithery badge](https://smithery.ai/badge/@ToddDrew/DigitalFate)](https://smithery.ai/server/@ToddDrew/DigitalFate)
 
 # What is DigitalFate?
 
@@ -30,6 +31,15 @@ DigitalFate provides an advanced, enterprise-ready framework for orchestrating L
 
 ## Installation
 
+### Installing via Smithery
+
+To install DigitalFate for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ToddDrew/DigitalFate):
+
+```bash
+npx -y @smithery/cli install @ToddDrew/DigitalFate --client claude
+```
+
+### Manual Installation
 ```bash
 pip install digitalfate
 ```
@@ -242,3 +252,5 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
+
+
