@@ -1,0 +1,33 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - openaiApiKey
+      - anthropicApiKey
+    properties:
+      openaiApiKey:
+        type: string
+        description: API key for OpenAI services
+      anthropicApiKey:
+        type: string
+        description: API key for Anthropic services
+      deepseekApiKey:
+        type: string
+        description: API key for DeepSeek services
+      awsAccessKeyId:
+        type: string
+        description: AWS Access Key ID for AWS integrations
+      awsSecretAccessKey:
+        type: string
+        description: AWS Secret Access Key for AWS integrations
+      awsRegion:
+        type: string
+        description: AWS region for Bedrock integrations
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'python3.12', args: ['-c', 'from DigitalFate.server import run_main_server_internal; run_main_server_internal(reload=False)'], env: { OPENAI_API_KEY: config.openaiApiKey, ANTHROPIC_API_KEY: config.anthropicApiKey, DEEPSEEK_API_KEY: config.deepseekApiKey || '', AWS_ACCESS_KEY_ID: config.awsAccessKeyId || '', AWS_SECRET_ACCESS_KEY: config.awsSecretAccessKey || '', AWS_REGION: config.awsRegion || '' } })
