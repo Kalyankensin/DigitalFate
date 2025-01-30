@@ -1,3 +1,6 @@
+
+![banner](https://github.com/user-attachments/assets/eecc3b3f-313c-41aa-a28f-0c10b64d61b6)
+
 # What is DigitalFate?
 
 DigitalFate provides an advanced, enterprise-ready framework for orchestrating LLM calls, agents, and computer-based tasks in a cost-efficient manner. It delivers reliable systems, scalability, and a task-oriented architecture to handle real-world applications effectively.
