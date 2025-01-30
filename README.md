@@ -1,7 +1,8 @@
-
 ![banner](https://github.com/user-attachments/assets/eecc3b3f-313c-41aa-a28f-0c10b64d61b6)
 
 # What is DigitalFate?
+[![smithery badge](https://smithery.ai/badge/@Kalyankensin/DigitalFate)](https://smithery.ai/server/@Kalyankensin/DigitalFate)
+
 
 DigitalFate provides an advanced, enterprise-ready framework for orchestrating LLM calls, agents, and computer-based tasks in a cost-efficient manner. It delivers reliable systems, scalability, and a task-oriented architecture to handle real-world applications effectively.
 
@@ -30,6 +31,15 @@ DigitalFate provides an advanced, enterprise-ready framework for orchestrating L
 
 ## Installation
 
+### Installing via Smithery
+
+To install DigitalFate for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@Kalyankensin/DigitalFate):
+
+```bash
+npx -y @smithery/cli install @Kalyankensin/DigitalFate --client claude
+```
+
+### Installing Manually
 ```bash
 pip install digitalfate
 ```
@@ -242,3 +252,5 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
+
+
